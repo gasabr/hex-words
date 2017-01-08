@@ -81,7 +81,7 @@ def print_dict(hex_dict, length=None):
 def find_def(hex_dict, word):
 	try:
 		w = hex_dict[word]
-		print_word(w, w['number'], n['defenition'])
+		print_word(word, w['number'], w['defenition'])
 	except KeyError as e:
 		print('Sorry, there is no such word.')
 
@@ -102,4 +102,5 @@ if __name__ == '__main__':
 	if args.refresh: refresh_dict()
 	if args.length: print_dict(hex_dict, args.length[0])
 	if args.number: find_by_num(hex_dict, args.number)
+	if args.word: find_def(hex_dict, args.word)
 
